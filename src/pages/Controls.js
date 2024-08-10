@@ -79,6 +79,12 @@ const Controls = () => {
                 >
                     Shuffle
                 </Button>
+                <Button
+                    variant='contained'
+                    onClick={() => handleChange('reset', true)}
+                >
+                    Reset
+                </Button>
             </Stack>
 
             <Box sx={{ width: '60%', display: 'flex' }}>

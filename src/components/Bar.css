@@ -2,4 +2,10 @@
     width: 20px;
     margin: 0 2px;
     transition: height 0.3s;
+    transform-origin: bottom;
+}
+
+.active {
+    transform: scaleY(1.15); /* Adjust scaleY to create a wave effect */
+    transition: height 1s ease !important;
 }

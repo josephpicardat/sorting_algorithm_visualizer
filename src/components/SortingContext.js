@@ -11,6 +11,7 @@ const SortingProvider = ({ children }) => {
         start: false,
         speed: 100,
         shuffle: false,
+        sorting: false,
     });
 
     // Function to update preferences

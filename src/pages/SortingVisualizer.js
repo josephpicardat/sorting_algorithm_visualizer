@@ -19,6 +19,7 @@ const sortingAlgorithms = {
 const SortingVisualizer = () => {
     const [values, setValues] = useState([]);
     const [activeIndices, setActiveIndices] = useState([]);
+    const [waveEffect, setWaveEffect] = useState(false);
     const { preferences, updatePreferences } = useContext(SortingContext);
 
     const generateRandomValues = (numBars) => {
@@ -40,7 +41,15 @@ const SortingVisualizer = () => {
     useEffect(() => {
         let values = generateRandomValues(preferences.size);
         setValues(values);
-    }, [preferences.size, preferences.sortingOption, preferences.speed]);
+        if (preferences.reset) {
+            updatePreferences({ reset: false });
+        }
+    }, [
+        preferences.size,
+        preferences.sortingOption,
+        preferences.speed,
+        preferences.reset,
+    ]);
 
     const updateArray = (newArray, index1 = null, index2 = null) => {
         setValues(newArray);
@@ -56,6 +65,7 @@ const SortingVisualizer = () => {
         if (algorithm) {
             await algorithm(values, updateArray, preferences.speed); // Call the sorting function with update callback
         }
+        createWaveEffect(values, setWaveEffect);
         updatePreferences({ start: false });
     };
 
@@ -77,6 +87,32 @@ const SortingVisualizer = () => {
         });
     };
 
+    const createWaveEffect = (values, setWaveEffect) => {
+        const delay = 10; // Delay between each wave start
+        const transitionTime = 100; // Time it takes for the bars to rise and fall
+        const totalBars = values.length;
+
+        const wave = async () => {
+            for (let i = 0; i < totalBars - 2; i++) {
+                // Highlight the current three bars
+                setWaveEffect([i, i + 1, i + 2]);
+
+                // Wait for the bars to rise
+                await new Promise((resolve) =>
+                    setTimeout(resolve, transitionTime)
+                );
+
+                // Move to the next set before the current one falls
+                await new Promise((resolve) => setTimeout(resolve, delay));
+            }
+
+            // Clear wave effect at the end
+            setWaveEffect([]);
+        };
+
+        wave();
+    };
+
     useEffect(() => {
         if (preferences.start) {
             handleSort();
@@ -96,6 +132,8 @@ const SortingVisualizer = () => {
                     key={idx}
                     height={value}
                     isActive={activeIndices.includes(idx)}
+                    isWaving={waveEffect}
+                    index={idx}
                 />
             ))}
         </div>

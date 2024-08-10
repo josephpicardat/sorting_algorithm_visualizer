@@ -1,12 +1,16 @@
 import './Bar.css';
 
-const Bar = ({ height, isActive }) => {
+const Bar = ({ height, isActive, isWaving, index }) => {
+    let truthing;
+    if (isWaving) {
+        truthing = isWaving.includes(index);
+    }
     return (
         <div
-            className='bar'
+            className={`bar ${truthing ? 'active' : ''}`}
             style={{
                 height: `${height}px`,
-                backgroundColor: isActive ? '#1976d2' : '#ffffff',
+                backgroundColor: isActive || truthing ? '#1976d2' : '#ffffff',
             }}
         ></div>
     );
