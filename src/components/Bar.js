@@ -1,7 +1,10 @@
 import './Bar.css';
 
 const Bar = ({ height, isActive, isWaving, index }) => {
-    const truthing = isWaving.includes(index);
+    let truthing;
+    if (isWaving) {
+        truthing = isWaving.includes(index);
+    }
     return (
         <div
             className={`bar ${truthing ? 'active' : ''}`}

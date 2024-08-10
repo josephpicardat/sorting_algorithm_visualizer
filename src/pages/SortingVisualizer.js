@@ -58,7 +58,6 @@ const SortingVisualizer = () => {
             await algorithm(values, updateArray, preferences.speed); // Call the sorting function with update callback
         }
         createWaveEffect(values, setWaveEffect);
-
         updatePreferences({ start: false });
     };
 
