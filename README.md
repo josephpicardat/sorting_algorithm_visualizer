@@ -18,7 +18,7 @@ To run the project locally, follow these steps:
 
 ### Prerequisites
 
-Node.js: Make sure you have Node.js installed. You can download it from [[nodejs.org](nodejs.org)](https://nodejs.org/).
+Node.js: Make sure you have Node.js installed. You can download it from [nodejs.org](https://nodejs.org/).
 
 ### Installation
 
