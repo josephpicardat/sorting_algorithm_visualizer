@@ -41,7 +41,15 @@ const SortingVisualizer = () => {
     useEffect(() => {
         let values = generateRandomValues(preferences.size);
         setValues(values);
-    }, [preferences.size, preferences.sortingOption, preferences.speed]);
+        if (preferences.reset) {
+            updatePreferences({ reset: false });
+        }
+    }, [
+        preferences.size,
+        preferences.sortingOption,
+        preferences.speed,
+        preferences.reset,
+    ]);
 
     const updateArray = (newArray, index1 = null, index2 = null) => {
         setValues(newArray);
