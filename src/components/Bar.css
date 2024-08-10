@@ -1,0 +1,5 @@
+.bar {
+    width: 20px;
+    margin: 0 2px;
+    transition: height 0.3s;
+}
