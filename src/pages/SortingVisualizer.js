@@ -106,12 +106,6 @@ const SortingVisualizer = () => {
         wave();
     };
 
-    const test = () => {
-        console.log('Testing');
-        createWaveEffect(values, setWaveEffect);
-        updatePreferences({ shuffle: false });
-    };
-
     useEffect(() => {
         if (preferences.start) {
             handleSort();

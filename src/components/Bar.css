@@ -6,7 +6,6 @@
 }
 
 .active {
-    /* background-color: #1976d2; */
     transform: scaleY(1.15); /* Adjust scaleY to create a wave effect */
     transition: height 1s ease !important;
 }
