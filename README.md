@@ -1,70 +1,135 @@
-# Getting Started with Create React App
+# Sorting Algorithm Visualizer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a visualizer for various sorting algorithms built with React. It helps users understand how different sorting algorithms work by providing a visual representation of the sorting process. Users can select different sorting algorithms, adjust parameters such as the number of bars and the sorting speed, and view the sorting process in real-time. Additionally, a wave effect is applied to the bars once the sorting is complete to enhance the visual appeal.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+-   Sorting Algorithms: Includes Bubble Sort, Quick Sort, Merge Sort, Insertion Sort, and Heap Sort.
+-   Interactive Controls: Allows users to select sorting algorithms, adjust the number of bars, and control sorting speed.
+-   Visual Feedback: Provides a visual representation of the sorting process with color changes to highlight active bars.
+-   Randomization: The initial bar heights are randomized, and a wave effect is applied after sorting completes.
+-   Responsive Design: Adapts to different screen sizes and provides a smooth user experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To run the project locally, follow these steps:
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Node.js: Make sure you have Node.js installed. You can download it from [nodejs.org](nodejs.org).
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```bash
+    git clone https://github.com/your-username/sorting_algorithm_visualizer.git
+    cd sorting_algorithm_visualizer
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install dependencies:**
 
-### `npm run eject`
+    ```bash
+    npm install
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Running the Project
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Start the development server:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ```bash
+    npm start
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Open your browser and navigate to:** [http://localhost:3000](http://localhost:3000)
 
-## Learn More
+## Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-   src/components/: Contains reusable components, such as Bar and the sorting algorithms.
+-   src/components/algorithms/: Contains implementations of sorting algorithms.
+-   src/pages/: Contains main pages like SortingVisualizer and Controls.
+-   src/SortingContext.js: Contains context for managing sorting preferences.
+-   src/App.js: Main application file that sets up routing and includes the main components.
+-   src/index.js: Entry point for the React application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Sorting Algorithms
 
-### Code Splitting
+This project includes several sorting algorithms. Below is a brief overview of each algorithm, including its time complexity and a sample implementation.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 1. Bubble Sort
 
-### Analyzing the Bundle Size
+**Description**: Bubble Sort is a simple comparison-based sorting algorithm. It repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The process is repeated until the list is sorted.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Time Complexity**:
 
-### Making a Progressive Web App
+-   Best Case: O(n) (when the array is already sorted)
+-   Average Case: O(n²)
+-   Worst Case: O(n²)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 2. Quick Sort
 
-### Advanced Configuration
+**Description**: Quick Sort is a divide-and-conquer algorithm. It picks an element as a pivot and partitions the array around the pivot. The pivot is chosen so that elements less than the pivot come before it and elements greater come after it.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Time Complexity**:
 
-### Deployment
+-   Best Case: O(n log n)
+-   Average Case: O(n log n)
+-   Worst Case: O(n²) (when the pivot is the smallest or largest element)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 3. Merge Sort
 
-### `npm run build` fails to minify
+**Description**: Description: Merge Sort is a divide-and-conquer algorithm that divides the array into halves, recursively sorts each half, and then merges the sorted halves back together. It is known for its efficiency and stability.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Time Complexity**:
+
+-   Best Case: O(n log n)
+-   Average Case: O(n log n)
+-   Worst Case: O(n log n)
+
+### 4. Insertion Sort
+
+**Description**: Description: Insertion Sort is a simple comparison-based sorting algorithm that builds the final sorted array one item at a time. It is much less efficient on large lists than more advanced algorithms such as Quick Sort.
+
+**Time Complexity**:
+
+-   Best Case: O(n) (when the array is already sorted)
+-   Average Case: O(n²)
+-   Worst Case: O(n²)
+
+### 5. Heap Sort
+
+**Description**: Description: Heap Sort is a comparison-based sorting algorithm that uses a binary heap data structure. It first builds a max heap from the input data and then repeatedly extracts the maximum element from the heap and reconstructs the heap until the array is sorted.
+
+**Time Complexity**:
+
+-   Best Case: O(n log n)
+-   Average Case: O(n log n)
+-   Worst Case: O(n log n)
+
+## Usage
+
+-   Select Algorithm: Choose a sorting algorithm from the dropdown menu.
+-   Adjust Size: Use the slider to set the number of bars to visualize.
+-   Adjust Speed: Use the slider to set the speed of sorting.
+-   Visualize Sorting: Click the "Visualize" button to start sorting.
+-   Shuffle: Click the "Shuffle" button to randomize the bar heights and select a new algorithm.
+
+## Technologies
+
+-   React: The library used for building the user interface.
+-   Material-UI: Provides UI components and styling.
+
+## License
+
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+(https://opensource.org/licenses/MIT)
+
+Copyright 2024 Joseph Picardat
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
