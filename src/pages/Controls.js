@@ -63,6 +63,7 @@ const Controls = () => {
                             backgroundColor: '#1976d2',
                             textAlign: 'center',
                             fontSize: { xs: '0.6rem', sm: '1rem' },
+                            padding: { xs: 0 },
                         }}
                     >
                         <MenuItem value={'Bubble Sort'}>Bubble Sort</MenuItem>
@@ -76,8 +77,9 @@ const Controls = () => {
                 </FormControl>
                 <Button
                     variant='contained'
+                    id='Visualize'
                     sx={{
-                        width: { xs: '160px', sm: '260px' },
+                        width: { xs: '160px', sm: '280px' },
                         fontSize: { xs: '0.6rem', sm: '1rem' },
                     }}
                     onClick={() => handleChange('start', true)}
