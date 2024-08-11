@@ -22,22 +22,29 @@ const Controls = () => {
                 width: '75%',
                 display: 'flex',
                 alignItems: 'center',
+                flexWrap: 'wrap',
             }}
         >
             <Stack
                 spacing={1}
                 direction='row'
                 sx={{
-                    width: '40%',
+                    width: {
+                        xs: '100%',
+                        sm: '40%',
+                    },
                     display: 'flex',
                     justifyContent: 'space-evenly',
+                    flexWrap: 'wrap',
+                    marginBottm: '2rem',
+                    minHeight: '70px',
                 }}
                 alignItems='center'
             >
                 <FormControl
                     variant='standard'
                     sx={{
-                        width: '220px',
+                        width: { xs: '120px', sm: '220px' },
                         color: 'white',
                         height: '100%',
                     }}
@@ -55,6 +62,7 @@ const Controls = () => {
                             borderRadius: 1,
                             backgroundColor: '#1976d2',
                             textAlign: 'center',
+                            fontSize: { xs: '0.6rem', sm: '1rem' },
                         }}
                     >
                         <MenuItem value={'Bubble Sort'}>Bubble Sort</MenuItem>
@@ -68,26 +76,40 @@ const Controls = () => {
                 </FormControl>
                 <Button
                     variant='contained'
-                    sx={{ width: '260px' }}
+                    sx={{
+                        width: { xs: '160px', sm: '260px' },
+                        fontSize: { xs: '0.6rem', sm: '1rem' },
+                    }}
                     onClick={() => handleChange('start', true)}
                 >
                     Visualize {preferences.sortingOption}
                 </Button>
                 <Button
                     variant='contained'
+                    sx={{ fontSize: { xs: '0.6rem', sm: '1rem' } }}
                     onClick={() => handleChange('shuffle', true)}
                 >
                     Shuffle
                 </Button>
                 <Button
                     variant='contained'
+                    sx={{ fontSize: { xs: '0.6rem', sm: '1rem' } }}
                     onClick={() => handleChange('reset', true)}
                 >
                     Reset
                 </Button>
             </Stack>
 
-            <Box sx={{ width: '60%', display: 'flex' }}>
+            <Box
+                id='sliderContainer'
+                sx={{
+                    width: {
+                        xs: '100%',
+                        sm: '60%',
+                    },
+                    display: 'flex',
+                }}
+            >
                 <Stack
                     spacing={1}
                     direction='column'
@@ -95,15 +117,16 @@ const Controls = () => {
                     alignItems='center'
                 >
                     <p
+                        className='SliderInfo'
                         style={{
                             color: 'white',
-                            fontSize: '1.5rem',
                             fontWeight: 'bold',
                         }}
                     >
                         Size: {preferences.size}
                     </p>
                     <Slider
+                        className='Slider'
                         value={preferences.size}
                         onChange={(event) =>
                             handleChange('size', event.target.value)
@@ -120,15 +143,17 @@ const Controls = () => {
                     alignItems='center'
                 >
                     <p
+                        className='SliderInfo'
                         style={{
                             color: 'white',
-                            fontSize: '1.5rem',
+                            fontSize: { xs: '0.6rem', sm: '1.5rem' },
                             fontWeight: 'bold',
                         }}
                     >
                         Speed: {preferences.speed}ms
                     </p>
                     <Slider
+                        className='Slider'
                         value={preferences.speed}
                         onChange={(event) =>
                             handleChange('speed', event.target.value)

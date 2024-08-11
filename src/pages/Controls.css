@@ -1,3 +1,20 @@
 .MuiSvgIcon-root {
     color: white !important;
 }
+
+.SliderInfo {
+    font-size: 1.5rem;
+}
+
+.Slider {
+    padding: 0.5rem !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .SliderInfo {
+        font-size: 1rem;
+    }
+    #sliderContainer {
+        padding-top: 1rem;
+    }
+}
