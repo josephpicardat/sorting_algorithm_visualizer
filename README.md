@@ -133,6 +133,11 @@ This project includes several sorting algorithms. Below is a brief overview of e
 -   React: The library used for building the user interface.
 -   Material-UI: Provides UI components and styling.
 
+## Contact Me
+
+### LinkedIn
+-   [Joseph](https://www.linkedin.com/in/josephpicardat/)
+
 ## License
 
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
