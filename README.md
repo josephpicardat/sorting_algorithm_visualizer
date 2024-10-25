@@ -2,7 +2,19 @@
 
 ## Overview
 
-This project is a visualizer for various sorting algorithms built with React. It helps users understand how different sorting algorithms work by providing a visual representation of the sorting process. Users can select different sorting algorithms, adjust parameters such as the number of bars and the sorting speed, and view the sorting process in real-time. Additionally, a wave effect is applied to the bars once the sorting is complete to enhance the visual appeal.
+This project is a visualizer for various sorting algorithms built with React. It helps users understand how different sorting algorithms work by providing a visual representation of the sorting process. Users can select different sorting algorithms, adjust parameters such as the number of bars and the sorting speed, and view the sorting process in real time. Additionally, a wave effect is applied to the bars once the sorting is complete to enhance the visual appeal.
+
+## Table of Contents
+
+-   [Features](#features)
+-   [Getting Started](#getting-started)
+-   [Contributing](#contributing)
+-   [Project Structure](#project-structure)
+-   [Sorting Algorithms](#sorting-algorithms)
+-   [Usage](#usage)
+-   [Technologies](#technologies)
+-   [License](#license)
+-   [Contact Us](#contact-information)
 
 ## Features
 
