@@ -8,13 +8,13 @@ This project is a visualizer for various sorting algorithms built with React. It
 
 -   [Features](#features)
 -   [Getting Started](#getting-started)
--   [Contributing](#contributing)
 -   [Project Structure](#project-structure)
 -   [Sorting Algorithms](#sorting-algorithms)
 -   [Usage](#usage)
 -   [Technologies](#technologies)
+-   [Contributing](#contributing)
+-   [Contact Me](#contact-information)
 -   [License](#license)
--   [Contact Us](#contact-information)
 
 ## Features
 
@@ -132,6 +132,10 @@ This project includes several sorting algorithms. Below is a brief overview of e
 
 -   React: The library used for building the user interface.
 -   Material-UI: Provides UI components and styling.
+
+## Contributing
+
+- This project was created as a self-made development application. If you are interested in contributing, please go and contact me via LinkedIn listed below.
 
 ## Contact Me
 
