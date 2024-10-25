@@ -140,7 +140,7 @@ This project includes several sorting algorithms. Below is a brief overview of e
 ## Contact Me
 
 ### LinkedIn
--   [Joseph](https://www.linkedin.com/in/josephpicardat/)
+-   [Joseph Picardat](https://www.linkedin.com/in/josephpicardat/)
 
 ## License
 
