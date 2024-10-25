@@ -13,7 +13,7 @@ This project is a visualizer for various sorting algorithms built with React. It
 -   [Usage](#usage)
 -   [Technologies](#technologies)
 -   [Contributing](#contributing)
--   [Contact Me](#contact-information)
+-   [Contact Me](#contact-me)
 -   [License](#license)
 
 ## Features
